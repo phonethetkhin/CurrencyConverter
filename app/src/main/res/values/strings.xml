@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="available_currencies">Available Currencies</string>
+    <string name="currencies_live_rates">Currencies Live Rates</string>
+    <string name="convert">Convert</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="enter_amount">Enter Amount</string>
+    <string name="dash">-</string>
+</resources>

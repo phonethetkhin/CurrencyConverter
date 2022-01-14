@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.ConvertFragment">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCurrency1"
+        style="@style/CustomDropDownStyle"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_64sdp"
+        android:background="@drawable/border"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/imgChangeCurrency"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <AutoCompleteTextView
+            android:id="@+id/ctvCurrency1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:focusable="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:padding="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="@string/dash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCurrency2"
+        style="@style/CustomDropDownStyle"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        app:boxStrokeWidth="0dp"
+        app:boxStrokeWidthFocused="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgChangeCurrency"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imgChangeCurrency"
+        app:layout_constraintTop_toTopOf="@+id/imgChangeCurrency">
+
+        <AutoCompleteTextView
+            android:id="@+id/ctvCurrency2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/white"
+            android:focusable="false"
+            android:inputType="none"
+            android:maxLines="1"
+            android:padding="@dimen/_8sdp"
+            android:singleLine="true"
+            android:text="@string/dash"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10ssp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <EditText
+        android:id="@+id/edtCurrency1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:background="@drawable/border"
+        android:hint="@string/enter_amount"
+        android:inputType="number"
+        android:padding="@dimen/_8sdp"
+        android:scrollbarSize="@dimen/_4sdp"
+        android:scrollbars="horizontal"
+        android:scrollHorizontally="true"
+        app:layout_constraintEnd_toEndOf="@+id/tilCurrency1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilCurrency1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txtCurrency2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/border"
+        android:padding="@dimen/_8sdp"
+        android:text="0"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tilCurrency2"
+        app:layout_constraintTop_toBottomOf="@id/tilCurrency2" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConvert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_64sdp"
+        android:text="Convert"
+        app:icon="@drawable/ic_convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtCurrency1" />
+
+    <ImageView
+        android:id="@+id/imgChangeCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_compare"
+        app:layout_constraintBottom_toBottomOf="@+id/tilCurrency1"
+        app:layout_constraintEnd_toStartOf="@+id/tilCurrency2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tilCurrency1"
+        app:layout_constraintTop_toTopOf="@+id/tilCurrency1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

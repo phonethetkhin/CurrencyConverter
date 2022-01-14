@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/availableCurrenciesFragment">
+
+
+    <fragment
+        android:id="@+id/availableCurrenciesFragment"
+        android:name="com.wavemoney.currencyconverter.ui.fragment.AvailableCurrenciesFragment"
+        android:label="fragment_available_currencies"
+        tools:layout="@layout/fragment_available_currencies" />
+    <fragment
+        android:id="@+id/liveRatesFragment"
+        android:name="com.wavemoney.currencyconverter.ui.fragment.LiveRatesFragment"
+        android:label="fragment_live_rates"
+        tools:layout="@layout/fragment_live_rates" />
+    <fragment
+        android:id="@+id/convertFragment"
+        android:name="com.wavemoney.currencyconverter.ui.fragment.ConvertFragment"
+        android:label="fragment_convert"
+        tools:layout="@layout/fragment_convert" />
+</navigation>
